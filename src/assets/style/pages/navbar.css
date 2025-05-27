@@ -1,0 +1,80 @@
+.navbar {
+  background-color: #1e1e1e;
+  padding: 15px 30px;
+  color: white;
+}
+
+.navbarsection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbarsection ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbarsection ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbarsection li a:hover {
+  color: #00bfff;
+}
+
+.sidemenu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.searchbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-input {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search-btn {
+  padding: 6px 12px;
+  border: none;
+  background-color: #00bfff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-btn:hover {
+  background-color: #009acd;
+}
+
+.loginbtn,
+.registerbtn {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+
+.loginbtn {
+  background-color: #28a745;
+}
+
+.registerbtn {
+  background-color: #007bff;
+}

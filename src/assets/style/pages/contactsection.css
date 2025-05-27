@@ -1,0 +1,57 @@
+.contactsection {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #fdfdfd;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contactsection h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #333;
+  font-weight: 600;
+}
+
+.contactsection form input,
+.contactsection form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.contactsection form input:focus,
+.contactsection form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.contactsection form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contactsection form button:hover {
+  background-color: #0056b3;
+}
+
+.contactsection form p {
+  margin-top: 15px;
+  color: green;
+  font-weight: 500;
+  text-align: center;
+}

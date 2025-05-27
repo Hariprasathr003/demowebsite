@@ -1,0 +1,54 @@
+.homesection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.homesection img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.homesection h1,
+.homesection p,
+.homesection button {
+  position: absolute;
+  color: #000;
+}
+
+.homesection h1 {
+  font-size: 40px;
+  font-weight: bold;
+  top: 100px;
+  left: 600px;
+}
+
+.homesection p {
+  top: 150px;
+  left: 600px;
+  font-size: 30px;
+  max-width: 600px;
+}
+
+.homesection button {
+  top: 270px;
+  left: 700px;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #063363;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.homesection button:hover {
+  background-color: #4d9cf1;
+}

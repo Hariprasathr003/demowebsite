@@ -1,0 +1,23 @@
+.aboutsection {
+  width: 100%;
+  background-color: #f3f4f6;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.aboutsection img {
+  max-width: 100%;
+  height: auto;
+  padding-left: 450px;
+  border-radius: 12px;
+}
+
+p {
+  max-width: 800px;
+  margin: 40px auto;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #4a4a4a;
+  padding: 0 20px;
+  text-align: center;
+}
