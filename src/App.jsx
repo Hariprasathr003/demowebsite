@@ -10,21 +10,17 @@ import Searchbarpractice from "./pages/SearchBar";
 import { useState } from "react";
 
 function App() {
-  const [searchItem, setSearchItem] = useState("");
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<RootLayout onSearch={setSearchItem} />}>
+        <Route path="/" element={<RootLayout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-          <Route
-            path="searchbar"
-            element={<Searchbarpractice searchItem={searchItem} />}
-          />
+          <Route path="searchbar" element={<Searchbarpractice />} />
         </Route>
       </Routes>
     </BrowserRouter>

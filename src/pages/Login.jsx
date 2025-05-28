@@ -49,7 +49,6 @@ function Login() {
       for (const key in data) {
         if (data[key].mail === email && data[key].password === password) {
           validUser = true;
-          break;
         }
       }
 
