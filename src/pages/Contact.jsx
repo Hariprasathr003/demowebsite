@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import { collection, addDoc } from "firebase/firestore";
 import { firestore } from "../firebaseConfig .js";
 import "../assets/style/pages/contactsection.css";
+import axios from "axios";
 function Contact() {
   const [name, setName] = useState("");
   const [mail, setEmail] = useState("");
@@ -12,31 +13,56 @@ function Contact() {
   const [storage, setStorage] = useState([]);
   const [submitMsg, setSubmitMsg] = useState(false);
 
-  async function handleSubmit(e) {
-    e.preventDefault();
+  // async function handleSubmit(e) {
+  //   e.preventDefault();
 
-    if (name && mail && message && number) {
-      const formData = {
-        name: name,
-        mail: mail,
-        phone: number,
-        message: message,
-        createdAt: new Date(),
-      };
-      //add firbase db
-      const docRef = await addDoc(
-        collection(firestore, "contactpage"),
+  //   if (name && mail && message && number) {
+  //     const formData = {
+  //       name: name,
+  //       mail: mail,
+  //       phone: number,
+  //       message: message,
+  //       createdAt: new Date(),
+  //     };
+  //     //add firbase db
+  //     const docRef = await addDoc(
+  //       collection(firestore, "contactpage"),
+  //       formData
+  //     );
+
+  //     setStorage([...storage, { id: docRef.id, ...formData }]);
+  //     setSubmitMsg(true);
+  //     setName("");
+  //     setNumber("");
+  //     setEmail("");
+  //     setMessage("");
+  //   }
+  // }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = {
+      name: name,
+      mail: mail,
+      phone: number,
+      message: message,
+      createdAt: new Date(),
+    };
+    try {
+      const response = await axios.post(
+        "https://simplewebpage-3aa9c-default-rtdb.firebaseio.com/contact.json",
         formData
       );
+      console.log(response);
 
-      setStorage([...storage, { id: docRef.id, ...formData }]);
-      setSubmitMsg(true);
       setName("");
       setNumber("");
       setEmail("");
       setMessage("");
+      alert("message sent successfully!");
+    } catch (error) {
+      console.log("error", error);
     }
-  }
+  };
 
   return (
     <>
